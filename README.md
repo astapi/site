@@ -11,6 +11,7 @@ astapi Gamesの公式Webサイトです。Google Play Console登録用の組織�
 ## 技術スタック
 
 - **フレームワーク**: Vite + React + TypeScript
+- **パッケージマネージャー**: pnpm
 - **ルーティング**: React Router
 - **デプロイ先**: Vercel
 
@@ -25,19 +26,19 @@ astapi Gamesの公式Webサイトです。Google Play Console登録用の組織�
 
 ```bash
 # 依存関係のインストール
-npm install
+pnpm install
 
 # 開発サーバーの起動
-npm run dev
+pnpm dev
 
 # プロダクションビルド
-npm run build
+pnpm build
 
 # プレビュー
-npm run preview
+pnpm preview
 
 # OG画像とfaviconの生成
-npm run generate-images
+pnpm generate-images
 ```
 
 ### 画像生成について

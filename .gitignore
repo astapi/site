@@ -13,6 +13,13 @@ dist
 dist-ssr
 *.local
 
+# Package manager files (npm/yarn)
+package-lock.json
+yarn.lock
+
+# pnpm
+.pnpm-store
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
