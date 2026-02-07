@@ -1,0 +1,237 @@
+/* LootDive Legal Pages - Dark Theme */
+
+.ld-legal-page {
+  --ld-accent: #BFFF00;
+  --ld-bg: #000000;
+  --ld-card-bg: #111111;
+  --ld-border: #1A1A1A;
+  --ld-text: #FFFFFF;
+  --ld-text-muted: #999999;
+  --ld-text-dim: #6e6e6e;
+
+  min-height: 100vh;
+  background: var(--ld-bg);
+  color: var(--ld-text);
+  font-family: 'Inter', sans-serif;
+  padding: 40px 24px 80px;
+}
+
+.ld-legal-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ld-legal-back {
+  display: inline-block;
+  color: var(--ld-accent);
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 40px;
+  transition: opacity 0.3s ease;
+}
+
+.ld-legal-back:hover {
+  opacity: 0.8;
+}
+
+.ld-legal-content {
+  background: var(--ld-card-bg);
+  border: 1px solid var(--ld-border);
+  padding: 48px;
+  margin-bottom: 0;
+}
+
+.ld-legal-content h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--ld-text);
+  margin: 0 0 8px 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.ld-legal-updated {
+  font-size: 14px;
+  color: var(--ld-text-dim);
+  margin: 0 0 32px 0;
+}
+
+.ld-legal-content section {
+  margin-bottom: 32px;
+}
+
+.ld-legal-content section:last-child {
+  margin-bottom: 0;
+}
+
+.ld-legal-content h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--ld-text);
+  margin: 0 0 16px 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--ld-border);
+  font-family: 'Inter', sans-serif;
+}
+
+.ld-legal-content h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ld-text-muted);
+  margin: 20px 0 12px 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.ld-legal-content p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--ld-text-muted);
+  margin: 0 0 16px 0;
+}
+
+.ld-legal-content ul {
+  margin: 0 0 16px 0;
+  padding-left: 24px;
+}
+
+.ld-legal-content li {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--ld-text-muted);
+  margin-bottom: 8px;
+}
+
+.ld-legal-content li strong {
+  color: var(--ld-text);
+}
+
+.ld-legal-content a {
+  color: var(--ld-accent);
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.ld-legal-content a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.ld-legal-divider {
+  border: none;
+  border-top: 1px solid var(--ld-border);
+  margin: 48px 0;
+}
+
+/* Contact Form */
+.ld-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.ld-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ld-form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ld-text);
+}
+
+.ld-form-group input,
+.ld-form-group select,
+.ld-form-group textarea {
+  padding: 12px 16px;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  background: var(--ld-bg);
+  border: 1px solid var(--ld-border);
+  color: var(--ld-text);
+  transition: border-color 0.3s ease;
+}
+
+.ld-form-group input:focus,
+.ld-form-group select:focus,
+.ld-form-group textarea:focus {
+  outline: none;
+  border-color: var(--ld-accent);
+}
+
+.ld-form-group input::placeholder,
+.ld-form-group textarea::placeholder {
+  color: var(--ld-text-dim);
+}
+
+.ld-form-group select {
+  cursor: pointer;
+}
+
+.ld-form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.ld-contact-btn {
+  padding: 14px 32px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  background: var(--ld-accent);
+  color: #000000;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.ld-contact-btn:hover:not(:disabled) {
+  background: #d4ff4d;
+}
+
+.ld-contact-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.ld-form-error {
+  padding: 12px 16px;
+  background: rgba(255, 100, 100, 0.1);
+  border: 1px solid rgba(255, 100, 100, 0.3);
+  color: #ff6464;
+  font-size: 14px;
+}
+
+.ld-contact-success {
+  text-align: center;
+  padding: 32px 0;
+}
+
+.ld-contact-success p {
+  color: var(--ld-text);
+  margin-bottom: 12px;
+}
+
+.ld-contact-success .ld-contact-btn {
+  margin-top: 24px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ld-legal-page {
+    padding: 24px 16px 60px;
+  }
+
+  .ld-legal-content {
+    padding: 32px 24px;
+  }
+
+  .ld-legal-content h1 {
+    font-size: 26px;
+  }
+
+  .ld-legal-content h2 {
+    font-size: 18px;
+  }
+}
