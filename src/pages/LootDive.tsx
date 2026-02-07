@@ -134,13 +134,13 @@ export default function LootDive() {
             <img src="/images/lootdive/ss-dungeon.png" alt="ダンジョン選択" />
           </div>
           <div className="ld-screenshot">
-            <img src="/images/lootdive/ss-inventory.png" alt="インベントリ" />
+            <img src="/images/lootdive/ss-inventory2.png" alt="インベントリ" />
           </div>
           <div className="ld-screenshot">
-            <img src="/images/lootdive/ss-skill.png" alt="スキルツリー" />
+            <img src="/images/lootdive/ss-skill2.png" alt="スキルツリー" />
           </div>
           <div className="ld-screenshot">
-            <img src="/images/lootdive/ss-battle.png" alt="戦闘画面" />
+            <img src="/images/lootdive/ss-battle2.png" alt="戦闘画面" />
           </div>
           <div className="ld-screenshot">
             <img src="/images/lootdive/ss-home.png" alt="ホーム画面" />
