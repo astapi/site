@@ -3,6 +3,7 @@ import Layout from './components/Layout'
 import Home from './pages/Home'
 import LootDive from './pages/LootDive'
 import LootDivePrivacy from './pages/LootDivePrivacy'
+import LootDivePrivacyEn from './pages/LootDivePrivacyEn'
 import LootDiveContact from './pages/LootDiveContact'
 import AdminInquiries from './pages/AdminInquiries'
 import Privacy from './pages/Privacy'
@@ -16,6 +17,7 @@ function App() {
         {/* LootDive has its own layout */}
         <Route path="/lootdive" element={<LootDive />} />
         <Route path="/lootdive/privacy" element={<LootDivePrivacy />} />
+        <Route path="/lootdive/privacy/en" element={<LootDivePrivacyEn />} />
         <Route path="/lootdive/contact" element={<LootDiveContact />} />
         <Route path="/admin/inquiries" element={<AdminInquiries />} />
         {/* Other pages use shared Layout */}
