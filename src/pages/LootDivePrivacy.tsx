@@ -11,7 +11,7 @@ export default function LootDivePrivacy() {
 
         <article className="ld-legal-content">
           <h1>プライバシーポリシー</h1>
-          <p className="ld-legal-updated">最終更新日：2026年2月7日</p>
+          <p className="ld-legal-updated">最終更新日：2026年2月11日</p>
 
           <p>本プライバシーポリシーは、LootDive（以下「本アプリ」）における個人情報の取り扱いについて説明します。</p>
 
@@ -28,6 +28,7 @@ export default function LootDivePrivacy() {
             <h3>ユーザーが提供する情報</h3>
             <ul>
               <li><strong>購入情報</strong>: アプリ内課金に関する情報（RevenueCat経由でAppleが処理）</li>
+              <li><strong>利用状況情報</strong>: 返金対応の判断のため、購入後の利用状況（プレイ状況、消費状況等）がApple Inc. に提供される場合があります</li>
             </ul>
 
             <h3>収集しない情報</h3>
@@ -45,6 +46,7 @@ export default function LootDivePrivacy() {
               <li>不具合の検出・修正</li>
               <li>広告の配信</li>
               <li>課金処理の実行</li>
+              <li>App Store における返金リクエスト対応および不正防止</li>
             </ul>
           </section>
 
