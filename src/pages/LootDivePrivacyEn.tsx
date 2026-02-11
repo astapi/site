@@ -11,7 +11,7 @@ export default function LootDivePrivacyEn() {
 
         <article className="ld-legal-content">
           <h1>Privacy Policy</h1>
-          <p className="ld-legal-updated">Last updated: February 7, 2026</p>
+          <p className="ld-legal-updated">Last updated: February 11, 2026</p>
 
           <p>This Privacy Policy describes how LootDive ("the App") handles your information.</p>
 
@@ -28,6 +28,7 @@ export default function LootDivePrivacyEn() {
             <h3>Information You Provide</h3>
             <ul>
               <li><strong>Purchase Information</strong>: In-app purchase data (processed by Apple via RevenueCat)</li>
+              <li><strong>Usage Information</strong>: Your post-purchase usage data (gameplay activity, consumption status, etc.) may be shared with Apple Inc. to support refund request decisions</li>
             </ul>
 
             <h3>Information We Do NOT Collect</h3>
@@ -45,6 +46,7 @@ export default function LootDivePrivacyEn() {
               <li>Detect and fix bugs</li>
               <li>Deliver advertisements</li>
               <li>Process in-app purchases</li>
+              <li>Handle App Store refund requests and prevent fraud</li>
             </ul>
           </section>
 
