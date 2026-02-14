@@ -29,7 +29,7 @@ export default function LootDive() {
         <div className="ld-hero-overlay"></div>
         <div className="ld-hero-content">
           <span className="ld-badge">iOS 無料配信中</span>
-          <h1 className="ld-headline">眺めているだけで、強くなる。</h1>
+          <h1 className="ld-headline">本格ハクスラビルド構築RPG</h1>
           <p className="ld-subline">
             完全オートバトルのハクスラRPG。
             <br />
