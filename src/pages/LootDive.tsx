@@ -12,7 +12,7 @@ export default function LootDive() {
         <nav className="ld-nav">
           <a href="#features" className="ld-nav-item">特徴</a>
           <a href="#screenshots" className="ld-nav-item">スクリーンショット</a>
-          <a href="#" className="ld-header-cta">
+          <a href="https://apps.apple.com/jp/app/lootdive/id6758569313" className="ld-header-cta">
             <svg className="ld-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
               <polyline points="7 10 12 15 17 10"/>
@@ -36,7 +36,7 @@ export default function LootDive() {
             17種以上のダンジョン、無限の装備、自分だけのスキルビルド。
           </p>
           <div className="ld-cta-row">
-            <a href="#" className="ld-btn-primary">
+            <a href="https://apps.apple.com/jp/app/lootdive/id6758569313" className="ld-btn-primary">
               <svg className="ld-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
                 <line x1="12" y1="18" x2="12" y2="18"/>
@@ -153,7 +153,7 @@ export default function LootDive() {
         <div className="ld-cta-divider"></div>
         <h2 className="ld-cta-headline">冒険を始めよう。</h2>
         <p className="ld-cta-sub">ダウンロード無料。今すぐ始められます。</p>
-        <a href="#" className="ld-btn-primary ld-btn-large">
+        <a href="https://apps.apple.com/jp/app/lootdive/id6758569313" className="ld-btn-primary ld-btn-large">
           <svg className="ld-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
             <line x1="12" y1="18" x2="12" y2="18"/>
