@@ -83,7 +83,7 @@ export default function Home() {
             {/* Buttons */}
             <div className="flex items-center gap-[10px] md:gap-3">
               <a
-                href="#"
+                href="https://apps.apple.com/jp/app/lootdive/id6758569313"
                 className="inline-flex items-center gap-[6px] md:gap-2 px-4 md:px-5 py-[10px] bg-[var(--color-text)] rounded-lg"
               >
                 <Smartphone className="w-[14px] md:w-4 h-[14px] md:h-4 text-white" />
