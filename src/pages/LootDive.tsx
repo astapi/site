@@ -7,7 +7,7 @@ export default function LootDive() {
       <header className="ld-header">
         <a href="/lootdive" className="ld-logo">
           <img src="/images/lootdive/icon.png" alt="" className="ld-logo-icon" />
-          <span className="ld-logo-text">LootDive</span>
+          <span className="ld-logo-text">ルートダイブ</span>
         </a>
         <nav className="ld-nav">
           <a href="#features" className="ld-nav-item">特徴</a>
@@ -161,14 +161,14 @@ export default function LootDive() {
           App Store でダウンロード
         </a>
         <div className="ld-app-icon">
-          <img src="/images/lootdive/icon.png" alt="LootDive" />
+          <img src="/images/lootdive/icon.png" alt="ルートダイブ" />
         </div>
       </section>
 
       {/* Footer */}
       <footer className="ld-footer">
         <div className="ld-footer-top">
-          <span className="ld-footer-logo">LootDive</span>
+          <span className="ld-footer-logo">ルートダイブ</span>
           <nav className="ld-footer-links">
             <a href="/lootdive/privacy">プライバシーポリシー</a>
             <a href="/lootdive/contact">お問い合わせ</a>
@@ -177,7 +177,6 @@ export default function LootDive() {
         <div className="ld-footer-divider"></div>
         <div className="ld-footer-bottom">
           <span className="ld-copyright">© 2026 <a href="/">astapi Games</a>. All rights reserved.</span>
-          <span className="ld-tagline">ハクスラRPG</span>
         </div>
       </footer>
     </div>

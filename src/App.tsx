@@ -5,6 +5,7 @@ import LootDive from './pages/LootDive'
 import LootDivePrivacy from './pages/LootDivePrivacy'
 import LootDivePrivacyEn from './pages/LootDivePrivacyEn'
 import LootDiveContact from './pages/LootDiveContact'
+import LootDiveReviewAppsIsland from './pages/LootDiveReviewAppsIsland'
 import AdminInquiries from './pages/AdminInquiries'
 import Privacy from './pages/Privacy'
 import Terms from './pages/Terms'
@@ -25,6 +26,7 @@ function App() {
           <Layout>
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/article/lootdive-review-apps-island" element={<LootDiveReviewAppsIsland />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
             </Routes>

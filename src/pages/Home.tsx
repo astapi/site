@@ -1,6 +1,14 @@
 import { Link } from 'react-router-dom'
 import { Smartphone, ArrowRight, Plus } from 'lucide-react'
 
+const news = [
+  {
+    date: '2026.03.08',
+    title: 'アプリ島様にルートダイブのレビューを掲載いただきました',
+    url: '/article/lootdive-review-apps-island',
+  },
+]
+
 export default function Home() {
   return (
     <div className="flex flex-col flex-1 bg-[var(--color-bg)]">
@@ -9,9 +17,25 @@ export default function Home() {
         <h1 className="text-[32px] md:text-[48px] font-bold text-[var(--color-text)] text-center">
           astapi Games
         </h1>
-        <p className="mt-3 md:mt-4 text-sm md:text-base text-[var(--color-text-light)] text-center">
-          つくったゲーム
-        </p>
+      </section>
+
+      {/* News Section */}
+      <section className="flex flex-col w-full max-w-[1024px] mx-auto px-5 pb-6 md:px-16 md:pb-8">
+        <h2 className="text-lg md:text-xl font-bold text-[var(--color-text)] mb-4 md:mb-5">
+          お知らせ
+        </h2>
+        <div className="flex flex-col bg-[var(--color-surface)] rounded-2xl border border-[var(--color-border)] divide-y divide-[var(--color-border)]">
+          {news.map((item) => (
+            <Link
+              key={item.url}
+              to={item.url}
+              className="flex flex-col md:flex-row md:items-center gap-1 md:gap-4 px-5 py-4 md:px-6 md:py-4 hover:bg-[var(--color-border)] transition-colors first:rounded-t-2xl last:rounded-b-2xl"
+            >
+              <span className="text-xs md:text-sm text-[var(--color-text-muted)] shrink-0">{item.date}</span>
+              <span className="text-sm md:text-[15px] text-[var(--color-text)] font-medium">{item.title}</span>
+            </Link>
+          ))}
+        </div>
       </section>
 
       {/* Apps Section */}
@@ -69,8 +93,11 @@ export default function Home() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="text-2xl md:text-[32px] font-bold text-[var(--color-text)]">
-                LootDive
+              <h3 className="text-xl md:text-2xl font-bold text-[var(--color-text)] leading-tight">
+                ルートダイブ
+                <span className="block text-xs md:text-sm font-medium text-[var(--color-text-muted)] mt-1">
+                  ビルド構築ハクスラ周回RPG
+                </span>
               </h3>
             </div>
 

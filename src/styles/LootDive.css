@@ -450,7 +450,7 @@
 
 .ld-footer-links a {
   font-size: 13px;
-  color: var(--ld-text-footer);
+  color: #FFFFFF;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -476,7 +476,7 @@
 .ld-copyright {
   font-family: 'JetBrains Mono', monospace;
   font-size: 11px;
-  color: var(--ld-border-light);
+  color: #FFFFFF;
 }
 
 .ld-tagline {

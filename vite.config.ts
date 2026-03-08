@@ -13,6 +13,7 @@ export default defineConfig({
       dynamicRoutes: [
         '/',
         '/lootdive',
+        '/article/lootdive-review-apps-island',
         '/privacy',
         '/terms'
       ]
