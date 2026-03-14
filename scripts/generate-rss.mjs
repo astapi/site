@@ -38,7 +38,7 @@ function generateRss(items, { title, description, feedPath }) {
       (item) => `    <item>
       <title>${escapeXml(item.title)}</title>
       <link>${SITE_URL}${item.url}</link>
-      <guid>${SITE_URL}${item.url}</guid>
+      <guid isPermaLink="false">${item.guid || item.url}</guid>
       <pubDate>${toRFC822(item.date)}</pubDate>
 ${item.tags.map((tag) => `      <category>${escapeXml(tag)}</category>`).join('\n')}
     </item>`

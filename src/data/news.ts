@@ -4,6 +4,7 @@ export interface NewsItem {
   date: string
   title: string
   url: string
+  guid?: string
   tags: NewsTag[]
 }
 
