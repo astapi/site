@@ -1,0 +1,18 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "C554RLNNG7.com.astapi.LootDive"
+        ],
+        "components": [
+          {
+            "/": "/lootdive/invite",
+            "?": { "code": "?*" },
+            "comment": "招待リンク"
+          }
+        ]
+      }
+    ]
+  }
+}
