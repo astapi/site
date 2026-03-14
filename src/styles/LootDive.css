@@ -370,6 +370,56 @@
   object-fit: cover;
 }
 
+/* ===== News Section ===== */
+.ld-news {
+  background: var(--ld-bg);
+  padding: 100px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+.ld-news-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+  border: 1px solid var(--ld-border);
+}
+
+.ld-news-item {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 20px 24px;
+  text-decoration: none;
+  border-bottom: 1px solid var(--ld-border);
+  transition: background 0.2s ease;
+}
+
+.ld-news-item:last-child {
+  border-bottom: none;
+}
+
+.ld-news-item:hover {
+  background: var(--ld-card-bg);
+}
+
+.ld-news-date {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: var(--ld-text-dim);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.ld-news-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ld-text);
+}
+
 /* ===== Final CTA Section ===== */
 .ld-final-cta {
   background: var(--ld-card-bg);
@@ -494,6 +544,7 @@
 
   .ld-features,
   .ld-gallery,
+  .ld-news,
   .ld-final-cta {
     padding: 80px 40px;
   }
@@ -561,8 +612,24 @@
 
   .ld-features,
   .ld-gallery,
+  .ld-news,
   .ld-final-cta {
     padding: 60px 20px;
+  }
+
+  .ld-news-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 16px 20px;
+  }
+
+  .ld-news-date {
+    font-size: 12px;
+  }
+
+  .ld-news-title {
+    font-size: 14px;
   }
 
   .ld-section-header {
@@ -702,8 +769,21 @@
 
   .ld-features,
   .ld-gallery,
+  .ld-news,
   .ld-final-cta {
     padding: 48px 16px;
+  }
+
+  .ld-news-item {
+    padding: 14px 16px;
+  }
+
+  .ld-news-date {
+    font-size: 11px;
+  }
+
+  .ld-news-title {
+    font-size: 13px;
   }
 
   .ld-label {

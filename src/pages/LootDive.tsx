@@ -1,4 +1,8 @@
+import { news } from '../data/news'
+import type { NewsItem } from '../data/news'
 import '../styles/LootDive.css'
+
+const lootdiveNews: NewsItem[] = news.filter((item) => item.tags.includes('lootdive'))
 
 export default function LootDive() {
   return (
@@ -145,6 +149,22 @@ export default function LootDive() {
           <div className="ld-screenshot">
             <img src="/images/lootdive/ss-home.png" alt="ホーム画面" />
           </div>
+        </div>
+      </section>
+
+      {/* News Section */}
+      <section className="ld-news">
+        <div className="ld-section-header">
+          <span className="ld-label">NEWS</span>
+          <h2 className="ld-section-title">お知らせ</h2>
+        </div>
+        <div className="ld-news-list">
+          {lootdiveNews.map((item) => (
+            <a key={item.url} href={item.url} className="ld-news-item">
+              <span className="ld-news-date">{item.date}</span>
+              <span className="ld-news-title">{item.title}</span>
+            </a>
+          ))}
         </div>
       </section>
 
