@@ -1,13 +1,9 @@
 import { Link } from 'react-router-dom'
 import { Smartphone, ArrowRight, Plus } from 'lucide-react'
+import { news } from '../data/news'
+import type { NewsItem } from '../data/news'
 
-const news = [
-  {
-    date: '2026.03.08',
-    title: 'アプリ島様にルートダイブのレビューを掲載いただきました',
-    url: '/article/lootdive-review-apps-island',
-  },
-]
+const websiteNews: NewsItem[] = news.filter((item) => item.tags.includes('website'))
 
 export default function Home() {
   return (
@@ -25,7 +21,7 @@ export default function Home() {
           お知らせ
         </h2>
         <div className="flex flex-col bg-[var(--color-surface)] rounded-2xl border border-[var(--color-border)] divide-y divide-[var(--color-border)]">
-          {news.map((item) => (
+          {websiteNews.map((item) => (
             <Link
               key={item.url}
               to={item.url}
