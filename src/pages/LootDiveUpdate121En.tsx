@@ -28,46 +28,59 @@ export default function LootDiveUpdate121En() {
 
         <section className="mb-10">
           <h2 className="text-lg md:text-xl font-bold text-[var(--color-text)] mb-4">
-            Balance Changes
+            New MODs
           </h2>
-
-          <h3 className="text-base md:text-lg font-semibold text-[var(--color-text)] mb-3">
-            New Mods
-          </h3>
-          <ul className="list-disc list-inside text-sm md:text-[15px] leading-[1.8] text-[var(--color-text)] mb-6 space-y-1">
-            <li>"Warlord's Enrage": Triggers once at 30% HP, granting +20% attack speed and +300 HP on hit</li>
-            <li>"Ignite Lifesteal": Recover a percentage of ignite damage as HP</li>
-          </ul>
-
-          <h3 className="text-base md:text-lg font-semibold text-[var(--color-text)] mb-3">
-            Unique Item Changes
-          </h3>
-          <ul className="list-disc list-inside text-sm md:text-[15px] leading-[1.8] text-[var(--color-text)] mb-6 space-y-1">
-            <li>Magma Core: Reworked to ignite-focused (Ignite Chance +60%, Ignite Damage +50%, Ignite Lifesteal +10%)</li>
-            <li>Kraken Tentacle: Changed to ATK +30, DEF +35, HP Regen +50, HP Regen +2%</li>
-            <li>Uber Kraken Tentacle: Changed to HP Regen +120, HP Regen +5%, HP +210, DEF +50</li>
-            <li>Uber Goblin Grip: Changed to Warlord's Enrage, HP +200, ATK +80, ATK Increased +20%</li>
-            <li>Uber Kraken Fin: Changed to Attack Speed -20%, HP Regen +5%, DEF +80, HP +250</li>
-            <li>Uber Kraken Eye: Changed to Poison Damage +50%, Poison Damage Reduction +5, HP +220, Poison Damage 5% more</li>
-            <li>Uber Endblade: Changed to ATK Increase +10%/5s, ATK Increased +30%, Attack Speed +20%, HP +280</li>
+          <ul className="list-disc list-inside text-sm md:text-[15px] leading-[1.8] text-[var(--color-text)] space-y-1">
+            <li>"HP Regen Conversion": Adds a percentage of your HP regen per second to ATK. A new build axis that converts recovery into offense.</li>
+            <li>"Warlord's Enrage": Triggers once when HP drops below 30%, granting Attack Speed +20% and HP on Hit +300 as a comeback mechanic.</li>
+            <li>"Ignite Lifesteal": Recovers a percentage of ignite damage dealt as HP. Adds survivability to ignite builds.</li>
           </ul>
         </section>
 
         <section className="mb-10">
           <h2 className="text-lg md:text-xl font-bold text-[var(--color-text)] mb-4">
-            Improvements
+            New Unique Equipment
           </h2>
           <ul className="list-disc list-inside text-sm md:text-[15px] leading-[1.8] text-[var(--color-text)] space-y-1">
-            <li>Encyclopedia now displays mod effects for unique items.</li>
+            <li>Double Strike Ring — Slot: Accessory / Drop: Bandit Chief — Fixed MOD: Critical Follow-up Attack (additional attack on critical hit)</li>
+            <li>Uber Double Strike Ring — Slot: Accessory / Drop: Uber Bandit Chief — ATK 95 / DEF 70 — Fixed MODs: Crit Rate +30%, Critical Follow-up Attack, HP on Hit +80, Attack Speed +15%</li>
           </ul>
         </section>
 
         <section className="mb-10">
           <h2 className="text-lg md:text-xl font-bold text-[var(--color-text)] mb-4">
-            Bug Fixes
+            Unique Equipment MOD Changes
+          </h2>
+          <ul className="list-disc list-inside text-sm md:text-[15px] leading-[1.8] text-[var(--color-text)] space-y-2">
+            <li>Lost Grimoire — Before: Crit Rate +25% → After: Ignite Chance +50%, Poison Chance +50%, DEF +40</li>
+            <li>Champion Axe — Before: ATK +8, Crit Rate +15% → After: Attack Speed -20%, Crit Rate +30%, ATK +60, HP +100</li>
+            <li>Dragon Heart — Before: HP Regen +55, ATK +30, DEF +30 → After: HP Regen +100, HP Regen +10%, HP Regen Conversion 50%</li>
+            <li>Magma Core — Before: ATK 15 / DEF 5, ATK +20, Crit Rate +20% → After: ATK 30 / DEF 30, Ignite Chance +60%, Ignite Damage +50%, Ignite Lifesteal 10%</li>
+          </ul>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="text-lg md:text-xl font-bold text-[var(--color-text)] mb-4">
+            Uber Equipment MOD Changes
+          </h2>
+          <ul className="list-disc list-inside text-sm md:text-[15px] leading-[1.8] text-[var(--color-text)] space-y-2">
+            <li>Uber Blade of Ruin — Before: Crit Rate +30% → After: ATK Increase +30%</li>
+            <li>Kraken Tentacle (Normal) — Before: Attack Speed +12%, HP Regen +30 → After: ATK +30, DEF +35, HP Regen +50, HP Regen +2%</li>
+            <li>Uber Kraken Tentacle — Before: Attack Speed +25%, HP Regen +80, ATK +50, HP +210 → After: HP Regen +120, HP Regen +5%, HP +210, DEF +50</li>
+            <li>Uber Kraken Fin — Before: Attack Speed +15%, HP Regen% +2%, DEF +60, HP +210 → After: Attack Speed -20%, HP Regen% +5%, DEF +80, HP +250</li>
+            <li>Uber Kraken Eye — Before: Poison Chance +25%, Poison Damage +50%, Damage Reduction +8%, HP +220 → After: Poison Damage +50%, Poison Damage Reduction +5, HP +220, Poison Damage More +5%</li>
+            <li>Uber Goblin Gauntlets — Before: Crit Rate +15%, ATK Increase +20%, HP +120, HP on Hit +35 → After: Warlord's Enrage, HP +200, ATK +80, ATK Increase +20%</li>
+          </ul>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="text-lg md:text-xl font-bold text-[var(--color-text)] mb-4">
+            Other Improvements
           </h2>
           <ul className="list-disc list-inside text-sm md:text-[15px] leading-[1.8] text-[var(--color-text)] space-y-1">
-            <li>Fixed an unnecessary header appearing on the encyclopedia detail screen.</li>
+            <li>Attack speed now has a minimum floor of 0.1 to prevent it from reaching zero or below with negative modifiers</li>
+            <li>Encyclopedia now displays MOD details for unique drops including Uber variants</li>
+            <li>Fixed a bug where boss monsters appeared as duplicates in the normal monster list in the encyclopedia</li>
           </ul>
         </section>
 
