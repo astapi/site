@@ -8,6 +8,8 @@ import LootDiveContact from './pages/LootDiveContact'
 import LootDiveReviewAppsIsland from './pages/LootDiveReviewAppsIsland'
 import LootDiveUpdate121 from './pages/LootDiveUpdate121'
 import LootDiveUpdate121En from './pages/LootDiveUpdate121En'
+import LootDiveUpdate122 from './pages/LootDiveUpdate122'
+import LootDiveUpdate122En from './pages/LootDiveUpdate122En'
 import AdminInquiries from './pages/AdminInquiries'
 import Privacy from './pages/Privacy'
 import Terms from './pages/Terms'
@@ -28,6 +30,8 @@ function App() {
           <Layout>
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/article/lootdive-update-1-2-2" element={<LootDiveUpdate122 />} />
+              <Route path="/article/lootdive-update-1-2-2/en" element={<LootDiveUpdate122En />} />
               <Route path="/article/lootdive-update-1-2-1" element={<LootDiveUpdate121 />} />
               <Route path="/article/lootdive-update-1-2-1/en" element={<LootDiveUpdate121En />} />
               <Route path="/article/lootdive-review-apps-island" element={<LootDiveReviewAppsIsland />} />
