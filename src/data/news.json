@@ -1,6 +1,20 @@
 [
   {
     "date": "2026.04.19",
+    "title": "ルートダイブ公式Wikiを公開しました",
+    "url": "/article/lootdive-wiki",
+    "guid": "lootdive-wiki",
+    "tags": ["lootdive", "website"]
+  },
+  {
+    "date": "2026.04.19",
+    "title": "LootDive Official Wiki is Now Live",
+    "url": "/article/lootdive-wiki/en",
+    "guid": "lootdive-wiki",
+    "tags": ["lootdive"]
+  },
+  {
+    "date": "2026.04.19",
     "title": "ルートダイブ ver1.3.1 アップデート情報",
     "url": "/article/lootdive-update-1-3-1",
     "guid": "lootdive-update-1-3-1",
