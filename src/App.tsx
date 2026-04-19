@@ -14,6 +14,8 @@ import LootDiveUpdate124 from './pages/LootDiveUpdate124'
 import LootDiveUpdate124En from './pages/LootDiveUpdate124En'
 import LootDiveUpdate130 from './pages/LootDiveUpdate130'
 import LootDiveUpdate130En from './pages/LootDiveUpdate130En'
+import LootDiveUpdate131 from './pages/LootDiveUpdate131'
+import LootDiveUpdate131En from './pages/LootDiveUpdate131En'
 import AdminInquiries from './pages/AdminInquiries'
 import Privacy from './pages/Privacy'
 import Terms from './pages/Terms'
@@ -34,6 +36,8 @@ function App() {
           <Layout>
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/article/lootdive-update-1-3-1" element={<LootDiveUpdate131 />} />
+              <Route path="/article/lootdive-update-1-3-1/en" element={<LootDiveUpdate131En />} />
               <Route path="/article/lootdive-update-1-3-0" element={<LootDiveUpdate130 />} />
               <Route path="/article/lootdive-update-1-3-0/en" element={<LootDiveUpdate130En />} />
               <Route path="/article/lootdive-update-1-2-4" element={<LootDiveUpdate124 />} />
