@@ -19,6 +19,9 @@ import LootDiveUpdate131En from './pages/LootDiveUpdate131En'
 import LootDiveUpdate134 from './pages/LootDiveUpdate134'
 import LootDiveUpdate134En from './pages/LootDiveUpdate134En'
 import LootDiveUpdate134Ko from './pages/LootDiveUpdate134Ko'
+import LootDiveUpdate200 from './pages/LootDiveUpdate200'
+import LootDiveUpdate200En from './pages/LootDiveUpdate200En'
+import LootDiveUpdate200Ko from './pages/LootDiveUpdate200Ko'
 import LootDiveWiki from './pages/LootDiveWiki'
 import LootDiveWikiEn from './pages/LootDiveWikiEn'
 import AdminInquiries from './pages/AdminInquiries'
@@ -43,6 +46,9 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/article/lootdive-wiki" element={<LootDiveWiki />} />
               <Route path="/article/lootdive-wiki/en" element={<LootDiveWikiEn />} />
+              <Route path="/article/lootdive-update-2-0-0" element={<LootDiveUpdate200 />} />
+              <Route path="/article/lootdive-update-2-0-0/en" element={<LootDiveUpdate200En />} />
+              <Route path="/article/lootdive-update-2-0-0/ko" element={<LootDiveUpdate200Ko />} />
               <Route path="/article/lootdive-update-1-3-4" element={<LootDiveUpdate134 />} />
               <Route path="/article/lootdive-update-1-3-4/en" element={<LootDiveUpdate134En />} />
               <Route path="/article/lootdive-update-1-3-4/ko" element={<LootDiveUpdate134Ko />} />
