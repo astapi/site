@@ -20,6 +20,9 @@ import LootDiveUpdate134 from './pages/LootDiveUpdate134'
 import LootDiveUpdate134En from './pages/LootDiveUpdate134En'
 import LootDiveUpdate134Ko from './pages/LootDiveUpdate134Ko'
 import LootDiveUpdate200 from './pages/LootDiveUpdate200'
+import LootDiveUpdate210 from './pages/LootDiveUpdate210'
+import LootDiveUpdate210En from './pages/LootDiveUpdate210En'
+import LootDiveUpdate210Ko from './pages/LootDiveUpdate210Ko'
 import LootDiveUpdate200En from './pages/LootDiveUpdate200En'
 import LootDiveUpdate200Ko from './pages/LootDiveUpdate200Ko'
 import LootDiveRelease200 from './pages/LootDiveRelease200'
@@ -52,6 +55,9 @@ function App() {
               <Route path="/article/lootdive-2-0-0-release/ko" element={<LootDiveRelease200Ko />} />
               <Route path="/article/lootdive-wiki" element={<LootDiveWiki />} />
               <Route path="/article/lootdive-wiki/en" element={<LootDiveWikiEn />} />
+              <Route path="/article/lootdive-update-2-1-0" element={<LootDiveUpdate210 />} />
+              <Route path="/article/lootdive-update-2-1-0/en" element={<LootDiveUpdate210En />} />
+              <Route path="/article/lootdive-update-2-1-0/ko" element={<LootDiveUpdate210Ko />} />
               <Route path="/article/lootdive-update-2-0-0" element={<LootDiveUpdate200 />} />
               <Route path="/article/lootdive-update-2-0-0/en" element={<LootDiveUpdate200En />} />
               <Route path="/article/lootdive-update-2-0-0/ko" element={<LootDiveUpdate200Ko />} />
