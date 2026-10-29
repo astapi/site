@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "astapi-net",
+  "compatibility_date": "2026-10-01",
+  // Astro の静的ビルドを配信するだけ (main なし)。静的アセットへのリクエストは Workers の無料枠を消費しない
+  "assets": {
+    "directory": "./dist",
+    // /article/foo → foo.html のように拡張子なしURLで配信する
+    "html_handling": "drop-trailing-slash",
+    "not_found_handling": "404-page"
+  },
+  // 本番切り替え時に routes (custom_domain: astapi.net) を追加する。それまでは workers.dev で確認
+  "workers_dev": true
+}

@@ -1,0 +1,16 @@
+---
+import BaseLayout from './BaseLayout.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+
+type Props = Parameters<typeof BaseLayout>[0]
+---
+
+<BaseLayout {...Astro.props}>
+  <slot name="head" slot="head" />
+  <div class="layout">
+    <Header />
+    <main><slot /></main>
+    <Footer />
+  </div>
+</BaseLayout>

@@ -1,0 +1,204 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { getArticles, articleUrl, newsDate, newsTitle } from '../lib/articles'
+import '../styles/LootDive.css'
+
+const lootdiveNews = (await getArticles()).filter((a) => a.data.tags.includes('lootdive'))
+---
+<BaseLayout title="ルートダイブ - 本格ハクスラビルド構築RPG" description="完全オートバトルのハクスラRPG。17種以上のダンジョン、無限の装備、自分だけのスキルビルド。">
+  <div class="ld-page">
+    <!-- Header -->
+    <header class="ld-header">
+      <a href="/lootdive" class="ld-logo">
+        <img src="/images/lootdive/icon.png" alt="" class="ld-logo-icon" />
+        <span class="ld-logo-text">ルートダイブ</span>
+      </a>
+      <nav class="ld-nav">
+        <a href="#features" class="ld-nav-item">特徴</a>
+        <a href="#screenshots" class="ld-nav-item">スクリーンショット</a>
+        <a href="https://apps.apple.com/jp/app/lootdive/id6758569313" class="ld-header-cta">
+          <svg class="ld-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          ダウンロード
+        </a>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="ld-hero">
+      <div class="ld-hero-bg"></div>
+      <div class="ld-hero-overlay"></div>
+      <div class="ld-hero-content">
+        <span class="ld-badge">iOS 無料配信中</span>
+        <h1 class="ld-headline">本格ハクスラビルド構築RPG</h1>
+        <p class="ld-subline">
+          完全オートバトルのハクスラRPG。
+          <br />
+          17種以上のダンジョン、無限の装備、自分だけのスキルビルド。
+        </p>
+        <div class="ld-cta-row">
+          <a href="https://apps.apple.com/jp/app/lootdive/id6758569313" class="ld-btn-primary">
+            <svg class="ld-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+              <line x1="12" y1="18" x2="12" y2="18"/>
+            </svg>
+            App Store でダウンロード
+          </a>
+          <a href="#features" class="ld-btn-secondary">
+            詳しく見る
+            <svg class="ld-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="ld-features">
+      <div class="ld-section-header">
+        <span class="ld-label">FEATURES</span>
+        <h2 class="ld-section-title">放置で楽しむ、本格ハクスラ</h2>
+        <p class="ld-section-subtitle">
+          タップ不要の完全オートバトル。でも、やり込み要素は本格派。
+        </p>
+      </div>
+      <div class="ld-feature-cards">
+        <div class="ld-feature-card">
+          <div class="ld-feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14.5 17.5L3 6V3h3l11.5 11.5"/>
+              <path d="M13 19l6-6"/>
+              <path d="M16 16l4 4"/>
+              <path d="M19 21l2-2"/>
+              <path d="M14.5 6.5L18 3h3v3l-3.5 3.5"/>
+              <path d="M5 14l4 4"/>
+              <path d="M7 17l-3 3"/>
+              <path d="M3 19l2 2"/>
+            </svg>
+          </div>
+          <h3 class="ld-feature-title">完全オートバトル</h3>
+          <p class="ld-feature-desc">
+            戦闘はすべて自動。画面を閉じている間もキャラクターが戦い続け、経験値とアイテムを獲得します。
+          </p>
+          <div class="ld-feature-screenshot">
+            <img src="/images/lootdive/ss-battle.png" alt="バトル画面" />
+          </div>
+        </div>
+        <div class="ld-feature-card">
+          <div class="ld-feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 3h12l4 6-10 13L2 9z"/>
+              <path d="M11 3l1 7 5-4"/>
+              <path d="M13 3l-1 7-5-4"/>
+            </svg>
+          </div>
+          <h3 class="ld-feature-title">装備収集 &amp; 強化</h3>
+          <p class="ld-feature-desc">
+            レア装備を集めて、強化して、最強のビルドを目指す。ハクスラの醍醐味がここに。
+          </p>
+          <div class="ld-feature-screenshot">
+            <img src="/images/lootdive/ss-inventory.png" alt="インベントリ画面" />
+          </div>
+        </div>
+        <div class="ld-feature-card">
+          <div class="ld-feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="6" y1="3" x2="6" y2="15"/>
+              <circle cx="18" cy="6" r="3"/>
+              <circle cx="6" cy="18" r="3"/>
+              <path d="M18 9a9 9 0 0 1-9 9"/>
+            </svg>
+          </div>
+          <h3 class="ld-feature-title">スキルツリー</h3>
+          <p class="ld-feature-desc">
+            パッシブスキルを組み合わせて、自分だけのビルドを構築。戦略は無限大。
+          </p>
+          <div class="ld-feature-screenshot">
+            <img src="/images/lootdive/ss-skill.png" alt="スキルツリー画面" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="screenshots" class="ld-gallery">
+      <div class="ld-section-header">
+        <span class="ld-label">SCREENSHOTS</span>
+        <h2 class="ld-section-title">ゲーム画面</h2>
+      </div>
+      <div class="ld-screenshots">
+        <div class="ld-screenshot">
+          <img src="/images/lootdive/ss-boss.png" alt="ボス戦" />
+        </div>
+        <div class="ld-screenshot">
+          <img src="/images/lootdive/ss-dungeon.png" alt="ダンジョン選択" />
+        </div>
+        <div class="ld-screenshot">
+          <img src="/images/lootdive/ss-inventory2.png" alt="インベントリ" />
+        </div>
+        <div class="ld-screenshot">
+          <img src="/images/lootdive/ss-skill2.png" alt="スキルツリー" />
+        </div>
+        <div class="ld-screenshot">
+          <img src="/images/lootdive/ss-battle2.png" alt="戦闘画面" />
+        </div>
+        <div class="ld-screenshot">
+          <img src="/images/lootdive/ss-home.png" alt="ホーム画面" />
+        </div>
+      </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="ld-news">
+      <div class="ld-section-header">
+        <span class="ld-label">NEWS</span>
+        <h2 class="ld-section-title">お知らせ</h2>
+      </div>
+      <div class="ld-news-list">
+        {lootdiveNews.map((item) => (
+          <a href={articleUrl(item)} class="ld-news-item">
+            <span class="ld-news-date">{newsDate(item)}</span>
+            <span class="ld-news-title">{newsTitle(item)}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="ld-final-cta">
+      <div class="ld-cta-divider"></div>
+      <h2 class="ld-cta-headline">冒険を始めよう。</h2>
+      <p class="ld-cta-sub">ダウンロード無料。今すぐ始められます。</p>
+      <a href="https://apps.apple.com/jp/app/lootdive/id6758569313" class="ld-btn-primary ld-btn-large">
+        <svg class="ld-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+          <line x1="12" y1="18" x2="12" y2="18"/>
+        </svg>
+        App Store でダウンロード
+      </a>
+      <div class="ld-app-icon">
+        <img src="/images/lootdive/icon.png" alt="ルートダイブ" />
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="ld-footer">
+      <div class="ld-footer-top">
+        <span class="ld-footer-logo">ルートダイブ</span>
+        <nav class="ld-footer-links">
+          <a href="/lootdive/privacy">プライバシーポリシー</a>
+          <a href="/lootdive/contact">お問い合わせ</a>
+        </nav>
+      </div>
+      <div class="ld-footer-divider"></div>
+      <div class="ld-footer-bottom">
+        <span class="ld-copyright">© 2026 <a href="/">astapi Games</a>. All rights reserved.</span>
+      </div>
+    </footer>
+  </div>
+    
+</BaseLayout>
