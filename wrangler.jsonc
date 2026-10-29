@@ -9,6 +9,9 @@
     "html_handling": "drop-trailing-slash",
     "not_found_handling": "404-page"
   },
-  // 本番切り替え時に routes (custom_domain: astapi.net) を追加する。それまでは workers.dev で確認
-  "workers_dev": true
+  "routes": [
+    { "pattern": "astapi.net", "custom_domain": true }
+  ],
+  "workers_dev": false,
+  "preview_urls": false
 }
