@@ -1,0 +1,23 @@
+{
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  "name": "astapi-inquiry-notify",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-01",
+  "routes": [
+    { "pattern": "api.astapi.net", "custom_domain": true }
+  ],
+  "workers_dev": false,
+  "vars": {
+    "ALLOWED_ORIGINS": "https://astapi.net,http://localhost:5173",
+    "ADMIN_URL": "https://admin.astapi.net"
+  },
+  // 同一IPからの送信を 60秒あたり3回に制限
+  "ratelimits": [
+    {
+      "name": "RATE_LIMITER",
+      "namespace_id": "1001",
+      "simple": { "limit": 3, "period": 60 }
+    }
+  ]
+  // DISCORD_WEBHOOK_URL は `wrangler secret put DISCORD_WEBHOOK_URL` で設定する
+}
