@@ -4,10 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build && node scripts/generate-rss.mjs",
+    "dev": "astro dev",
+    "build": "astro build",
     "lint": "eslint .",
-    "preview": "vite preview",
+    "preview": "astro build && wrangler dev",
+    "deploy": "astro build && wrangler deploy",
     "generate-images": "node scripts/generate-images.mjs",
     "admin:dev": "vite --config admin/vite.config.ts",
     "admin:build": "tsc -p admin/tsconfig.json && vite build --config admin/vite.config.ts",
@@ -15,12 +16,12 @@
     "notify:deploy": "wrangler deploy -c workers/inquiry-notify/wrangler.jsonc"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.7.4",
     "@tailwindcss/vite": "^4.1.18",
+    "astro": "7.4.2",
     "firebase": "^12.9.0",
-    "lucide-react": "^0.563.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "react-router-dom": "^7.13.0",
     "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
@@ -37,7 +38,6 @@
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
     "vite": "^7.2.4",
-    "vite-plugin-sitemap": "^0.8.2",
-    "wrangler": "^4.154.0"
+    "wrangler": "^4.150.0"
   }
 }

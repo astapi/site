@@ -1,0 +1,72 @@
+---
+import '../index.css'
+
+interface Props {
+  title?: string
+  description?: string
+  ogImage?: string
+  ogType?: 'website' | 'article'
+  lang?: string
+}
+
+const SITE_NAME = 'astapi Games'
+const DEFAULT_TITLE = 'astapi Games - モバイルゲーム開発'
+const DEFAULT_DESCRIPTION =
+  'モバイルゲームを開発しています。現在開発中のLootDiveは完全自動戦闘のハクスラRPG。装備とパッシブでビルドを組み、ダンジョン周回で戦利品を厳選しよう。'
+
+const {
+  title,
+  description = DEFAULT_DESCRIPTION,
+  ogImage = '/og-image.png',
+  ogType = 'website',
+  lang = 'ja',
+} = Astro.props
+
+const fullTitle = title ? `${title} | ${SITE_NAME}` : DEFAULT_TITLE
+const canonical = new URL(Astro.url.pathname, Astro.site)
+const ogImageUrl = new URL(ogImage, Astro.site)
+const ogLocale = { ja: 'ja_JP', en: 'en_US', ko: 'ko_KR' }[lang] ?? 'ja_JP'
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:site_name" content={SITE_NAME} />
+    <meta property="og:locale" content={ogLocale} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+
+    <link rel="alternate" type="application/rss+xml" title="astapi Games - お知らせ" href="/rss.xml" />
+    <link rel="alternate" type="application/rss+xml" title="astapi Games - LootDive お知らせ" href="/rss/lootdive.xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <slot name="head" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
