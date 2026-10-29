@@ -30,7 +30,6 @@ import LootDiveRelease200En from './pages/LootDiveRelease200En'
 import LootDiveRelease200Ko from './pages/LootDiveRelease200Ko'
 import LootDiveWiki from './pages/LootDiveWiki'
 import LootDiveWikiEn from './pages/LootDiveWikiEn'
-import AdminInquiries from './pages/AdminInquiries'
 import Privacy from './pages/Privacy'
 import Terms from './pages/Terms'
 import './App.css'
@@ -44,7 +43,6 @@ function App() {
         <Route path="/lootdive/privacy" element={<LootDivePrivacy />} />
         <Route path="/lootdive/privacy/en" element={<LootDivePrivacyEn />} />
         <Route path="/lootdive/contact" element={<LootDiveContact />} />
-        <Route path="/admin/inquiries" element={<AdminInquiries />} />
         {/* Other pages use shared Layout */}
         <Route path="/*" element={
           <Layout>

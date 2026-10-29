@@ -8,7 +8,11 @@
     "build": "tsc -b && vite build && node scripts/generate-rss.mjs",
     "lint": "eslint .",
     "preview": "vite preview",
-    "generate-images": "node scripts/generate-images.mjs"
+    "generate-images": "node scripts/generate-images.mjs",
+    "admin:dev": "vite --config admin/vite.config.ts",
+    "admin:build": "tsc -p admin/tsconfig.json && vite build --config admin/vite.config.ts",
+    "admin:deploy": "pnpm admin:build && wrangler deploy -c admin/wrangler.jsonc",
+    "notify:deploy": "wrangler deploy -c workers/inquiry-notify/wrangler.jsonc"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",
@@ -33,6 +37,7 @@
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
     "vite": "^7.2.4",
-    "vite-plugin-sitemap": "^0.8.2"
+    "vite-plugin-sitemap": "^0.8.2",
+    "wrangler": "^4.154.0"
   }
 }
