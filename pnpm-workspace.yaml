@@ -3,3 +3,5 @@ allowBuilds:
   esbuild: true
   protobufjs: true
   sharp: true
+# 公開から3日未満のバージョンはインストールしない (サプライチェーン攻撃対策)
+minimumReleaseAge: 4320

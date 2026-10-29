@@ -1,0 +1,116 @@
+---
+import { render } from 'astro:content'
+import SiteLayout from '../../layouts/SiteLayout.astro'
+import { getArticles, articleLang, articleSlug, articleUrl } from '../../lib/articles'
+import type { Article, Lang } from '../../lib/articles'
+
+export async function getStaticPaths() {
+  const articles = await getArticles()
+  return articles.map((article) => ({
+    params: { path: articleUrl(article).replace('/article/', '') },
+    props: {
+      article,
+      translations: articles.filter(
+        (a) => articleSlug(a) === articleSlug(article) && a.id !== article.id,
+      ),
+    },
+  }))
+}
+
+interface Props {
+  article: Article
+  translations: Article[]
+}
+
+const { article, translations } = Astro.props
+const { Content } = await render(article)
+const lang = articleLang(article)
+
+const LABELS: Record<Lang, { back: string; download: string; appStore: string; appStoreUrl: string }> = {
+  ja: {
+    back: '← トップへ戻る',
+    download: 'ルートダイブをダウンロード',
+    appStore: 'App Storeでダウンロード →',
+    appStoreUrl: 'https://apps.apple.com/jp/app/lootdive/id6758569313',
+  },
+  en: {
+    back: '← Back to Top',
+    download: 'Download LootDive',
+    appStore: 'Download on the App Store →',
+    appStoreUrl: 'https://apps.apple.com/app/lootdive/id6758569313',
+  },
+  ko: {
+    back: '← 홈으로 돌아가기',
+    download: '루트다이브 다운로드',
+    appStore: 'App Store에서 다운로드 →',
+    appStoreUrl: 'https://apps.apple.com/app/lootdive/id6758569313',
+  },
+}
+const LANG_NAMES: Record<Lang, string> = { ja: '日本語', en: 'English', ko: '한국어' }
+
+const [y, m, d] = article.data.date.split('-').map(Number)
+const date = new Date(Date.UTC(y, m - 1, d))
+const displayDate = {
+  ja: `${y}年${m}月${d}日`,
+  en: date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' }),
+  ko: `${y}년 ${m}월 ${d}일`,
+}[lang]
+
+const labels = LABELS[lang]
+---
+
+<SiteLayout
+  title={article.data.title}
+  description={article.data.description ?? article.data.title}
+  ogType="article"
+  lang={lang}
+>
+  <Fragment slot="head">
+    {translations.map((t) => (
+      <link rel="alternate" hreflang={articleLang(t)} href={new URL(articleUrl(t), Astro.site)} />
+    ))}
+  </Fragment>
+  <div class="flex flex-col flex-1 bg-[var(--color-bg)]">
+    <article class="flex flex-col w-full max-w-[800px] mx-auto px-5 pt-10 pb-[60px] md:px-16 md:pt-16 md:pb-[100px]">
+      <a
+        href="/"
+        class="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors mb-8"
+      >
+        {labels.back}
+      </a>
+
+      <h1 class="text-2xl md:text-[32px] font-bold text-[var(--color-text)] mb-2">
+        {article.data.title}
+      </h1>
+      <div class="flex items-center gap-3 mb-8">
+        <p class="text-sm text-[var(--color-text-muted)]">{displayDate}</p>
+        {translations.map((t) => (
+          <a
+            href={articleUrl(t)}
+            class="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
+          >
+            {LANG_NAMES[articleLang(t)]} &rarr;
+          </a>
+        ))}
+      </div>
+
+      <div class="article-body mb-10">
+        <Content />
+      </div>
+
+      <div class="border-t border-[var(--color-border)] pt-8">
+        <h2 class="text-lg md:text-xl font-bold text-[var(--color-text)] mb-4">
+          {labels.download}
+        </h2>
+        <a
+          href={labels.appStoreUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-sm font-medium text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
+        >
+          {labels.appStore}
+        </a>
+      </div>
+    </article>
+  </div>
+</SiteLayout>
